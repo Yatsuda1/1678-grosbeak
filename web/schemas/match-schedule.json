@@ -1,0 +1,57 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": {
+        "$ref": "#/$defs/Match"
+    },
+    "$defs": {
+        "Match": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "teams": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/$defs/Team"
+                    }
+                }
+            },
+            "required": [
+                "teams"
+            ],
+            "title": "MatchScheduleSchemaValue"
+        },
+        "Team": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "number": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                },
+                "color": {
+                    "$ref": "#/$defs/Color"
+                }
+            },
+            "required": [
+                "color",
+                "number"
+            ],
+            "title": "Team"
+        },
+        "Color": {
+            "type": "string",
+            "enum": [
+                "blue",
+                "red"
+            ],
+            "title": "Color"
+        }
+    }
+}

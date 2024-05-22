@@ -1,0 +1,44 @@
+<!--
+This is the main HTML file for the Grosbeak web application. 
+It contains the structure and layout of the user interface, 
+as well as references to external resources such as scripts and stylesheets.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grosbeak</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ajv/8.11.0/ajv2020.min.js" integrity="sha512-Bn1M0ydQuS0oqSomCHeeIqLOh7xvTAO1ycGwlu8gtzKHPLObqzWzoN18Rycy1XJN3Bn+2RiVtgE8xVc7pofLUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="/script.js"></script>
+</head>
+<body>
+    <label for="apikey">API Key</label>
+    <input type="text" id="apikey" />
+    <br>
+    <label for="eventkey">Event Key</label>
+    <input type="text" id="eventkey" placeholder="e.g. 2022cada" />
+    <details>
+        <summary>Match Schedule</summary>
+        <label for="matchschedule">JSON File</label>
+        <input type="file" id="matchschedule" accept=".json" />
+        <br>
+        <button id="submit-matchschedule" disabled>Submit</button>
+    </details>
+    <details>
+        <summary>Team List</summary>
+        <label for="teamlist">JSON File</label>
+        <input type="file" id="teamlist" accept=".json" />
+        <br>
+        <button id="submit-teamlist" disabled>Submit</button>
+    </details>
+    <details>
+        <summary>Picklist Sheet</summary>
+        <label for="picklist">Picklist Sheet ID</label>
+        <input type="text" id="picklist" />
+        <br>
+        <button id="submit-picklist" disabled>Submit</button>
+    </details>
+</body>
+</html>

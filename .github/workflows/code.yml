@@ -1,0 +1,49 @@
+name: Code Check
+
+on: [ push, pull_request ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: psf/black@stable
+        with:
+          version: "~= 22.3"
+          src: "./grosbeak"
+      - uses: chartboost/ruff-action@v1
+  type-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.11"
+          architecture: x64
+      - name: "Install dependencies"
+        run: |
+          pip3 install poetry==1.3.2
+          poetry config virtualenvs.create false
+          poetry install
+      - name: "Run mypy"
+        run: |
+          mypy
+
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.11"
+          architecture: x64
+      - name: "Install dependencies"
+        run: |
+          pip3 install poetry==1.3.2
+          poetry config virtualenvs.create false
+          poetry install
+      - name: "Run pytest"
+        run: |
+          pytest
