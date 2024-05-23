@@ -1,0 +1,4 @@
+# Grosbeak
+___
+Welcome to the public repository for Team 1678 Software Scouting's Grosbeak! Feel free to check out our [2024 Scouting Whitepaper](https://www.citruscircuits.org/uploads/6/9/3/4/6934550/whitepaper_2024_-_final.pdf) and the 2024 public Software Scouting repositories for our [Match Collection](https://github.com/frc1678/match-collection-2024-public), [Viewer](https://github.com/frc1678/viewer-2024-public), [Server](https://github.com/frc1678/server-2024-public), [Schema](https://github.com/frc1678/schema-2024-public), [Stand Strategist](https://github.com/frc1678/stand-strategist-2024-public), [Pit Collection](https://github.com/frc1678/pit-collection-2024-public), [OverRate](https://github.com/frc1678/overrate-2024-public), and [Picklist Editor](https://github.com/frc1678/picklist-editor-2024-public) apps.
+___
